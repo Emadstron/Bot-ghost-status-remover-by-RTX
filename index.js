@@ -13,7 +13,11 @@
  * **********************************************
  */
 
-require('dotenv').config();
+const Discord = require('discord.js');
+const keep_alive = require('./keep_alive.js')
+
+const client = new Discord.client();
+require('dotenv').config()
 const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
 
 Promise.all()
