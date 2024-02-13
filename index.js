@@ -15,7 +15,7 @@
 
 const Discord = require('discord.js');
 const keep_alive = require('./keep_alive.js')
-const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
+const lib = require('lib')({token:https://discord.com/api/webhooks/1203975613220913183/vPvczdt5SsoSonYb9T0AiEaw8CXaE5AoMHWPE3BqxYdM9M2XjKsttSeD_MgOlSoRgJSq  });
 
 require('dotenv').config()
 
