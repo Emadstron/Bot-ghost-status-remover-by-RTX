@@ -18,9 +18,9 @@ const keep_alive = require('./keep_alive.js')
 
 const client = new Discord.client();
 require('dotenv').config()
-const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
 
-Promise.all()
+
+Promise.all(
 await lib.discord.channels['@0.3.2'].messages.create({
   "channel_id": `${context.params.event.channel_id}`,
   "content": "",
