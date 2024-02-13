@@ -15,21 +15,11 @@
 
 const Discord = require('discord.js');
 const keep_alive = require('./keep_alive.js')
+const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
 
-const client = new Discord.client();
 require('dotenv').config()
 
 
-Promise.all({
-await lib.discord.channels['@0.3.2'].messages.create({
-  "channel_id": `${context.params.event.channel_id}`,
-  "content": "",
-  "tts": false,
-  "message_reference": {
-    "channel_id": 1206773756987576300,
-    "guild_id": 1203956999168200700,
-    "fail_if_not_exists": true
-  },
   "embeds": [
     { 
       "id": 908415980,
@@ -174,12 +164,10 @@ function updateStatusAndSendMessages() {
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
-    activities: [{ name: currentStatus, type: ActivityType.Custom}],
-    status: 'dnd',
   });
 
   
-  const textChannel = client.channels.cache.get(channelId);
+  const textChannel = client.channels.cache.get(1206773756987576300 );
 
   if (textChannel instanceof TextChannel) {
    
