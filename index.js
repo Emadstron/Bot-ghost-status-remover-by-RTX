@@ -19,7 +19,7 @@ const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
 
 require('dotenv').config()
 
-
+{
   "embeds": [
     { 
       "id": 908415980,
